@@ -98,6 +98,7 @@ SPRING_PROFILES_ACTIVE=dev gradle bootRun
 > Note: This repository does not include `gradle-wrapper.jar` because binary files are not supported by the delivery channel.
 > If you need the wrapper, run `gradle wrapper --gradle-version 8.14.3` locally to regenerate it and then use `./gradlew`.
 
+
 ### Alternative: using Makefile
 ```
 make dev-up
