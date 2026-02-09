@@ -1,0 +1,15 @@
+spring:
+  docker:
+    compose:
+      enabled: true
+      file: docker-compose.yml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/app
+    username: app_user
+    password: app_pass
+  flyway:
+    enabled: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
