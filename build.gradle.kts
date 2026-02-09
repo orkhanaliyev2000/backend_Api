@@ -77,8 +77,12 @@ checkstyle {
 
 tasks.withType<Checkstyle> {
     reports {
-        xml.required.set(false)
-        html.required.set(true)
+        xml {
+            required.set(false)
+        }
+        html {
+            required.set(true)
+        }
     }
 }
 
@@ -88,8 +92,12 @@ spotbugs {
 
 tasks.withType<SpotBugsTask> {
     reports {
-        xml.required.set(false)
-        html.required.set(true)
+        xml {
+            required.set(false)
+        }
+        html {
+            required.set(true)
+        }
     }
 }
 
