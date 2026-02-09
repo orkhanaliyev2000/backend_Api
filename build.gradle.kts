@@ -2,7 +2,7 @@ import com.github.spotbugs.snom.SpotBugsTask
 
 plugins {
     java
-    id("org.springframework.boot") version "3.3.5"
+    id("org.springframework.boot") version "4.0.2"
     id("io.spring.dependency-management") version "1.1.6"
     id("com.diffplug.spotless") version "6.25.0"
     id("checkstyle")
