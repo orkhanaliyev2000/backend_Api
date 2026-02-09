@@ -98,20 +98,6 @@ SPRING_PROFILES_ACTIVE=dev gradle bootRun
 > Note: This repository does not include `gradle-wrapper.jar` because binary files are not supported by the delivery channel.
 > If you need the wrapper, run `gradle wrapper --gradle-version 8.14.3` locally to regenerate it and then use `./gradlew`.
 
-### Run from IDE (IntelliJ / Eclipse / VS Code)
-If you want to start the app via the IDE **Run** button:
-
-1. Ensure the database is running:
-   ```
-   make dev-up
-   ```
-2. Set active profile to `dev`:
-   - Environment variable: `SPRING_PROFILES_ACTIVE=dev`, or
-   - JVM option: `-Dspring.profiles.active=dev`
-3. Use the main class:
-   ```
-   com.example.javabackendtemplate.JavaBackendTemplateApplication
-   ```
 
 ### Alternative: using Makefile
 ```
