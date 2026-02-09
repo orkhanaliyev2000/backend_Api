@@ -7,13 +7,13 @@ dev-down:
 	docker compose down -v
 
 run-dev:
-	SPRING_PROFILES_ACTIVE=dev ./gradlew bootRun
+	SPRING_PROFILES_ACTIVE=dev gradle bootRun
 
 test:
-	./gradlew test
+	gradle test
 
 fmt:
-	./gradlew spotlessApply
+	gradle spotlessApply
 
 lint:
-	./gradlew checkstyleMain spotbugsMain
+	gradle checkstyleMain spotbugsMain

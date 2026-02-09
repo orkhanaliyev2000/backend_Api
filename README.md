@@ -92,11 +92,11 @@ Production-ready Java 21 + Spring Boot 3.x backend template with PostgreSQL, Fly
 Spring Boot can auto-start the Docker Compose dependencies when using the `dev` profile.
 
 ```
-SPRING_PROFILES_ACTIVE=dev ./gradlew bootRun
+SPRING_PROFILES_ACTIVE=dev gradle bootRun
 ```
 
 > Note: This repository does not include `gradle-wrapper.jar` because binary files are not supported by the delivery channel.
-> If you need the wrapper, run `gradle wrapper --gradle-version 8.14.3` locally to regenerate it.
+> If you need the wrapper, run `gradle wrapper --gradle-version 8.14.3` locally to regenerate it and then use `./gradlew`.
 
 ### Alternative: using Makefile
 ```
@@ -112,7 +112,7 @@ make dev-down
 ## Testing
 
 ```
-./gradlew test
+gradle test
 ```
 
 ## DB migrations
@@ -131,7 +131,7 @@ make dev-down
 
 Build and run the Docker image:
 ```
-./gradlew bootJar
+gradle bootJar
 
 docker build -t java-backend-template:latest .
 docker run -p 8080:8080 \
@@ -178,11 +178,11 @@ Security is disabled by default to keep the template simple. To enable JWT-based
 ## Quick checklist
 
 ### Run locally
-1. `SPRING_PROFILES_ACTIVE=dev ./gradlew bootRun`
+1. `SPRING_PROFILES_ACTIVE=dev gradle bootRun`
 2. Open `http://localhost:8080/swagger-ui.html`
 
 ### Deploy to prod
-1. Build: `./gradlew bootJar`
+1. Build: `gradle bootJar`
 2. Build image: `docker build -t java-backend-template:latest .`
 3. Run with env secrets injected (no DB container in prod)
 

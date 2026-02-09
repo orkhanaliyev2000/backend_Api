@@ -20,7 +20,7 @@ jobs:
           cache: "gradle"
 
       - name: Build
-        run: ./gradlew clean build
+        run: gradle clean build
 
       - name: Lint
-        run: ./gradlew checkstyleMain spotbugsMain spotlessCheck
+        run: gradle checkstyleMain spotbugsMain spotlessCheck
